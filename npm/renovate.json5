@@ -1,0 +1,29 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    'config:recommended',
+    ':configMigration',
+    'schedule:daily',
+    ':updateNotScheduled',
+    ':pinDevDependencies'
+  ],
+  "packageRules": [
+    {
+      groupName: 'all non-major dependencies for npm',
+      groupSlug: 'npm-all-minor-patch',
+      matchManagers: [
+        'npm',
+      ],
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+      ],
+      matchPackageNames: [
+        '*',
+      ],
+    }
+  ],
+  reviewers: [
+    'team:maintainer'
+  ]
+}
