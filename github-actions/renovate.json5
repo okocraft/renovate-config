@@ -1,0 +1,29 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:recommended',
+    ':configMigration',
+    'schedule:daily',
+    ':updateNotScheduled',
+    'helpers:pinGitHubActionDigests'
+  ],
+  packageRules: [
+    {
+      groupName: 'all non-major dependencies for GitHub Actions',
+      groupSlug: 'gha-all-minor-patch',
+      matchManagers: [
+        'github-actions',
+      ],
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+      ],
+      matchPackageNames: [
+        '*',
+      ],
+    }
+  ],
+  reviewers: [
+    'team:maintainer'
+  ]
+}
