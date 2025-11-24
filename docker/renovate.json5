@@ -1,0 +1,30 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:recommended',
+    ':configMigration',
+    'schedule:daily',
+    ':updateNotScheduled',
+    'docker:pinDigests'
+  ],
+  packageRules: [
+    {
+      groupName: 'all non-major dependencies for Docker',
+      groupSlug: 'docker-all-minor-patch',
+      matchManagers: [
+        'dockerfile',
+        'docker-compose',
+      ],
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+      ],
+      matchPackageNames: [
+        '*',
+      ],
+    }
+  ],
+  reviewers: [
+    'team:maintainer'
+  ]
+}
