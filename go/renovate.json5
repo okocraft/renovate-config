@@ -1,0 +1,31 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:recommended',
+    ':configMigration',
+    'schedule:daily',
+    ':updateNotScheduled'
+  ],
+  packageRules: [
+    {
+      groupName: 'all non-major dependencies for go',
+      groupSlug: 'go-all-minor-patch',
+      matchManagers: [
+        'gomod'
+      ],
+      matchUpdateTypes: [
+        'minor',
+        'patch'
+      ],
+      matchPackageNames: [
+        '*'
+      ]
+    }
+  ],
+  reviewers: [
+    'team:maintainer'
+  ],
+  postUpdateOptions: [
+    'gomodTidy'
+  ]
+}
