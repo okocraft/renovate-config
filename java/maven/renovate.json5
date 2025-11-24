@@ -1,0 +1,36 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:recommended',
+    ':configMigration',
+    'schedule:daily',
+    ':updateNotScheduled'
+  ],
+  packageRules: [
+    {
+      matchManagers: [
+        'maven',
+        'maven-wrapper'
+      ],
+      "allowedVersions": "!/.*-SNAPSHOT$/"
+    },
+    {
+      groupName: 'all non-major dependencies for Maven',
+      groupSlug: 'maven-all-minor-patch',
+      matchManagers: [
+        'maven',
+        'maven-wrapper'
+      ],
+      matchUpdateTypes: [
+        'minor',
+        'patch'
+      ],
+      matchPackageNames: [
+        '*'
+      ],
+    }
+  ],
+  reviewers: [
+    'team:maintainer'
+  ]
+}

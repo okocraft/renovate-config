@@ -1,0 +1,21 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  packageRules: [
+    {
+      matchManagers: [
+        'maven',
+        'maven-wrapper',
+        'gradle',
+        'gradle-wrapper'
+      ],
+      "matchPackagePatterns": [
+        'com\\.destroystokyo\\.paper:paper-api',
+        'io\\.papermc\\.paper:paper-api',
+        'dev\\.folia:folia-api',
+        'org\\.velocitypowered:velocity-api',
+        'io\\.github\\.waterfallmc:waterfall-api'
+      ],
+      "enabled": false
+    }
+  ]
+}
