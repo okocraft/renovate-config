@@ -1,0 +1,26 @@
+name: Validate Renovate Config
+
+on:
+  push:
+    paths:
+      - ./github/workflows/validate-config.yml
+      - '**/renovate.json5'
+  pull_request:
+    paths:
+      - ./github/workflows/validate-config.yml
+      - '**/renovate.json5'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        with:
+          fetch-depth: "1"
+      - name: Setup Node.js
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+        with:
+          node-version: "24"
+      - name: Validate Renovate configuration
+        run: npx --yes --package renovate -- renovate-config-validator --strict **/renovate.json5
