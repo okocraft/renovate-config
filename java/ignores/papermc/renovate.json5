@@ -8,12 +8,12 @@
         'gradle',
         'gradle-wrapper'
       ],
-      "matchPackagePatterns": [
-        'com\\.destroystokyo\\.paper:paper-api',
-        'io\\.papermc\\.paper:paper-api',
-        'dev\\.folia:folia-api',
-        'com\\.velocitypowered:velocity-api',
-        'io\\.github\\.waterfallmc:waterfall-api'
+      "matchPackageNames": [
+        '/com\\.destroystokyo\\.paper:paper-api/',
+        '/io\\.papermc\\.paper:paper-api/',
+        '/dev\\.folia:folia-api/',
+        '/com\\.velocitypowered:velocity-api/',
+        '/io\\.github\\.waterfallmc:waterfall-api/'
       ],
       "enabled": false
     }
