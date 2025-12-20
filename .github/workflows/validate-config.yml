@@ -3,11 +3,11 @@ name: Validate Renovate Config
 on:
   push:
     paths:
-      - ./github/workflows/validate-config.yml
+      - ./.github/workflows/validate-config.yml
       - '**/renovate.json5'
   pull_request:
     paths:
-      - ./github/workflows/validate-config.yml
+      - ./.github/workflows/validate-config.yml
       - '**/renovate.json5'
 
 jobs:
