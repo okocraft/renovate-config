@@ -1,0 +1,29 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:recommended',
+    ':configMigration',
+    'schedule:daily',
+    ':updateNotScheduled'
+  ],
+  minimumReleaseAge: '7 days',
+  packageRules: [
+    {
+      groupName: 'all non-major dependencies for mise',
+      groupSlug: 'mise-all-minor-patch',
+      matchManagers: [
+        'mise'
+      ],
+      matchUpdateTypes: [
+        'minor',
+        'patch'
+      ],
+      matchPackageNames: [
+        '*'
+      ]
+    }
+  ],
+  reviewers: [
+    'team:maintainer'
+  ]
+}
