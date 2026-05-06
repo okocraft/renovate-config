@@ -6,6 +6,7 @@
     'schedule:daily',
     ':updateNotScheduled'
   ],
+  minimumReleaseAge: '7 days',
   packageRules: [
     {
       groupName: 'all non-major dependencies for go',
