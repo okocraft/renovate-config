@@ -5,18 +5,28 @@
     {
       matchManagers: [
         'maven',
-        'maven-wrapper',
-        'gradle',
-        'gradle-wrapper'
+        'gradle'
       ],
       "matchPackageNames": [
         '/com\\.destroystokyo\\.paper:paper-api/',
-        '/io\\.papermc\\.paper:paper-api/',
-        '/dev\\.folia:folia-api/',
         '/com\\.velocitypowered:velocity-api/',
         '/io\\.github\\.waterfallmc:waterfall-api/'
       ],
       "enabled": false
+    },
+    {
+      matchManagers: [
+        'maven',
+        'gradle'
+      ],
+      "matchPackageNames": [
+        '/io\\.papermc\\.paper:paper-api/',
+        '/dev\\.folia:folia-api/'
+      ],
+      registryUrls: [
+        'https://repo.papermc.io/repository/maven-public/'
+      ],
+      "enabled": true
     }
   ]
 }
