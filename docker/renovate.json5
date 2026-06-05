@@ -8,6 +8,7 @@
     'docker:pinDigests'
   ],
   minimumReleaseAge: '7 days',
+  prCreation: 'not-pending',
   packageRules: [
     {
       groupName: 'all non-major dependencies for Docker',

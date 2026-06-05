@@ -8,6 +8,7 @@
     'helpers:pinGitHubActionDigests'
   ],
   minimumReleaseAge: '7 days',
+  prCreation: 'not-pending',
   packageRules: [
     {
       groupName: 'all non-major dependencies for GitHub Actions',
