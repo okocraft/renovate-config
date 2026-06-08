@@ -1,13 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    'config:recommended',
-    ':configMigration',
-    'schedule:daily',
-    ':updateNotScheduled',
+    'github>okocraft/renovate-config//base.renovate.json5',
     ':pinDevDependencies'
   ],
-  minimumReleaseAge: '7 days',
   "packageRules": [
     {
       groupName: 'all non-major dependencies for npm',
@@ -23,8 +19,5 @@
         '*',
       ],
     }
-  ],
-  reviewers: [
-    'team:maintainer'
   ]
 }
