@@ -9,7 +9,6 @@
       ],
       "matchPackageNames": [
         '/com\\.destroystokyo\\.paper:paper-api/',
-        '/com\\.velocitypowered:velocity-api/',
         '/io\\.github\\.waterfallmc:waterfall-api/'
       ],
       "enabled": false
@@ -21,7 +20,8 @@
       ],
       "matchPackageNames": [
         '/io\\.papermc\\.paper:paper-api/',
-        '/dev\\.folia:folia-api/'
+        '/dev\\.folia:folia-api/',
+        '/com\\.velocitypowered:velocity-api/'
       ],
       registryUrls: [
         'https://repo.papermc.io/repository/maven-public/'
