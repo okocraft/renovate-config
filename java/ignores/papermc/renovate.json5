@@ -27,6 +27,19 @@
         'https://repo.papermc.io/repository/maven-public/'
       ],
       "enabled": true
+    },
+    {
+      matchManagers: [
+        'maven',
+        'gradle'
+      ],
+      "matchPackageNames": [
+        '/com\\.mojang:brigadier/'
+      ],
+      registryUrls: [
+        'https://libraries.minecraft.net/'
+      ],
+      "enabled": true
     }
   ]
 }
