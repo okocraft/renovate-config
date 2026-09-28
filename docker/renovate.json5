@@ -9,7 +9,7 @@
       matchDatasources: [
         'docker',
       ],
-      minimumReleaseAge: '0 days',
+      minimumReleaseAge: null,
     },
     {
       groupName: 'all non-major dependencies for Docker',
