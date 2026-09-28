@@ -1,6 +1,5 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  minimumReleaseAge: '3 days',
   packageRules: [
     {
       matchManagers: [
@@ -37,6 +36,7 @@
         '/io\\.papermc\\.paper:paper-api/',
         '/dev\\.folia:folia-api/'
       ],
+      minimumReleaseAge: '3 days',
       ignoreUnstable: false,
       allowedVersions: '!/-alpha(?:\\.|$)/'
     },
