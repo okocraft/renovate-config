@@ -1,6 +1,6 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  minimumReleaseAge: '7 days',
+  minimumReleaseAge: '3 days',
   packageRules: [
     {
       matchManagers: [
@@ -27,6 +27,18 @@
         'https://repo.papermc.io/repository/maven-public/'
       ],
       "enabled": true
+    },
+    {
+      matchManagers: [
+        'maven',
+        'gradle'
+      ],
+      "matchPackageNames": [
+        '/io\\.papermc\\.paper:paper-api/',
+        '/dev\\.folia:folia-api/'
+      ],
+      ignoreUnstable: false,
+      allowedVersions: '!/-alpha(?:\\.|$)/'
     },
     {
       matchManagers: [
