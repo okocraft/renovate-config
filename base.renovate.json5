@@ -3,6 +3,7 @@
   extends: [
     'config:recommended',
     ':configMigration',
+    ':enableVulnerabilityAlerts',
     'schedule:daily',
     ':updateNotScheduled'
   ],
