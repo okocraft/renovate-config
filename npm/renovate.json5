@@ -4,6 +4,11 @@
     'github>okocraft/renovate-config//base.renovate.json5',
     ':pinDevDependencies'
   ],
+  npm: {
+    lockFileMaintenance: {
+      enabled: true
+    }
+  },
   "packageRules": [
     {
       groupName: 'all non-major dependencies for npm',
