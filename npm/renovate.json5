@@ -23,6 +23,16 @@
       matchPackageNames: [
         '*',
       ],
+    },
+    {
+      description: 'Let the package manager enforce release age during lockfile maintenance',
+      matchManagers: [
+        'npm',
+      ],
+      matchUpdateTypes: [
+        'lockFileMaintenance',
+      ],
+      minimumReleaseAge: null,
     }
   ]
 }
