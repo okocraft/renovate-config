@@ -25,6 +25,17 @@
       matchPackageNames: [
         '*',
       ],
+    },
+    {
+      description: 'Automerge Docker digest updates after CI passes',
+      matchDatasources: [
+        'docker',
+      ],
+      matchUpdateTypes: [
+        'digest',
+      ],
+      automerge: true,
+      platformAutomerge: false,
     }
   ]
 }
